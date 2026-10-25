@@ -105,3 +105,20 @@ for i, ax in enumerate(axes):
 
 plt.tight_layout()
 plt.show()
+
+#step 9: Save the test images and their predicted labels to a text file
+with open("test_predictions.txt", "w") as f:
+    for i in range(len(X_test)):
+        image = X_test[i].reshape(8, 8)
+        predicted = predictions[i, 0]
+        actual = y_test[i, 0]
+
+        f.write(f"Test Image {i + 1}:\n")
+        f.write(f"Predicted Label: {predicted}\n")
+        f.write(f"Actual Label: {actual}\n")
+        f.write("Image Data:\n")
+        np.savetxt(f, image, fmt="%.2f")
+        f.write("\n\n")
+
+print("\nTest images and their predicted labels saved to 'test_predictions.txt'.")
+
