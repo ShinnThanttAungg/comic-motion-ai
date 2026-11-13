@@ -14,3 +14,10 @@ __pycache__/
 # Private datasets
 private_data/
 datasets/private/
+
+# Local comic images and generated panels
+data/raw/
+data/processed/
+lessons/lesson_03/images/
+lessons/lesson_03/extracted_panels/
+lessons/lesson_03/extracted_panels_v2/
